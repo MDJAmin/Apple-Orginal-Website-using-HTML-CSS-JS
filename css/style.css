@@ -127,19 +127,4 @@ nav a {
     padding-left: 10px;
   }
 }
-
-/* Dark mode toggle (optional) */
-body.dark-mode {
-  background: var(--background-dark);
-  color: var(--text-dark);
-}
-
-body.dark-mode nav {
-  background: var(--background-dark);
-}
-
-body.dark-mode a {
-  color: var(--text-dark);
-}
-
 /* hero section */

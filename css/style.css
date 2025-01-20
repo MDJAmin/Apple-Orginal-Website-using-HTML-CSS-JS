@@ -1,34 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+/* Root for themes */
+:root {
+  --background-wormy: #f7f7f9;
+  --background-light: #ffffff;
+  --background-dark: #000;
+  --text-light: #000;
+  --text-dark: #fff;
+}
+
 body {
-    margin: 0;
-  }
-  
-  nav {
-    background: #323232;
-    height: 44px;
-  }
-  
-  nav ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  nav li {
-    margin: 0 15px;
-  }
-  
+  font-family: "SF Pro Display", "SF Pro Icons",
+    "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: var(--background-light);
+  color: var(--text-light);
+  margin: 0;
+}
+
+/* Navbar styling */
+nav {
+  background: var(--background-wormy);
+  height: 44px;
+  transition: background 0.3s, color 0.3s;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  opacity: 90%;
+}
+
+nav li {
+  margin: 0 15px;
+}
+
+nav a {
+  color: var(--text-light);
+  font-size: 13px;
+  line-height: 44px;
+  display: block;
+  transition: color 0.3s;
+}
+
+.navIcons {
+  font-size: 18px;
+  padding-top: 14px;
+}
+
+/* Hamburger menu */
+.hamburger {
+  display: flex;
+  font-size: 25px;
+  cursor: pointer;
+}
+.bx-menu {
+  display: none;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+/* Responsive Styles (navbar)*/
+@media (max-width: 1015px) {
   nav a {
-    color: white;
-    text-decoration: none;
+    font-size: 10px;
+  }
+
+  .navIcons {
     font-size: 15px;
-    line-height: 44px;
-    display: block;
   }
-  
-  nav a:hover {
-    color: #b8b8b8;
+}
+@media (max-width: 895px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    position: absolute;
+    top: 44px;
+    left: 0;
+    width: 100%;
+    padding: 25px 0;
+    height: 699px;
+    background: var(--background-light);
+    text-align: start;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   }
-  
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    color: var(--text-light);
+  }
+  .bx-menu {
+    display: flex;
+  }
+  nav a {
+    font-size: 27px;
+  }
+
+  .container {
+    justify-content: space-between;
+  }
+  .navIcons {
+    font-size: 20px;
+  }
+  .bx-menu {
+    padding-top: 3px;
+    padding-left: 10px;
+  }
+}
+
+/* Dark mode toggle (optional) */
+body.dark-mode {
+  background: var(--background-dark);
+  color: var(--text-dark);
+}
+
+body.dark-mode nav {
+  background: var(--background-dark);
+}
+
+body.dark-mode a {
+  color: var(--text-dark);
+}
+
+/* hero section */

@@ -29,33 +29,58 @@ const swiper = new Swiper('.mySwiper', {
     clickable: true,
   },
 });
-
-// Slider 2
-
-const slider = document.querySelector('.slider');
-const items = document.querySelectorAll('.slider-item');
+const slider = document.getElementById('slider');
 const playButton = document.getElementById('playButton');
 const playIcon = document.getElementById('playIcon');
-let currentIndex = 0;
+let currentIndex = 6;
 let interval;
 let isPlaying = false;
 
-function showSlide(index) {
-  items.forEach((item, i) => {
-    item.classList.remove('active');
-    if (i === index) {
-      item.classList.add('active');
-    }
+const images = [
+  'assets/Slider 2/1.jpg',
+  'assets/Slider 2/2.jpg',
+  'assets/Slider 2/3.jpg',
+  'assets/Slider 2/4.jpg',
+  'assets/Slider 2/131x131SC.DN01.jpg',
+  'assets/Slider 2/196x196sr.jpg'
+];
+
+function loadImages() {
+  images.forEach(image => {
+    const img = document.createElement('img');
+    img.src = image;
+    img.classList.add('slider-item');
+    img.alt = 'Image';
+    slider.appendChild(img);
   });
 
-  slider.style.transform = `translateX(-${index * 100}%)`;
+  for (let i = 0; i < 50; i++) {
+    images.forEach(image => {
+      const img = document.createElement('img');
+      img.src = image;
+      img.classList.add('slider-item');
+      img.alt = 'Image';
+      slider.appendChild(img);
+    });
+  }
+
+  slider.children[6].classList.add('active');
+}
+
+function moveSlider() {
+  const items = document.querySelectorAll('.slider-item');
+  items.forEach(item => {
+    item.classList.remove('active');
+  });
+
+  currentIndex = (currentIndex + 1) % items.length;
+  items[currentIndex].classList.add('active');
+  
+  slider.style.transform = `translateX(-${currentIndex * 100}%)`;
 }
 
 function startSlider() {
-  interval = setInterval(() => {
-    currentIndex = (currentIndex + 1) % items.length;
-    showSlide(currentIndex);
-  }, 2000);
+  interval = setInterval(moveSlider, 2000);
 }
 
 function stopSlider() {
@@ -72,7 +97,9 @@ playButton.addEventListener('click', () => {
     stopSlider();
   }
 });
-showSlide(currentIndex);
+
+loadImages();
+slider.style.transform = `translateX(-${currentIndex * 100}%)`;
 
 // login processes 
 

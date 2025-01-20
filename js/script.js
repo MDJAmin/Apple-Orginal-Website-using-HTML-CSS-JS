@@ -1,4 +1,7 @@
 "use strict"
+
+// hamburger menu
+
 const hamburger = document.querySelector(".hamburger");
 const navLinks = document.querySelector(".nav-links");
 
@@ -7,6 +10,7 @@ hamburger.addEventListener("click", () => {
 });
 
 
+// Slider 1
 
 const swiper = new Swiper('.mySwiper', {
   loop: true,
@@ -25,6 +29,8 @@ const swiper = new Swiper('.mySwiper', {
     clickable: true,
   },
 });
+
+// Slider 2
 
 const slider = document.querySelector('.slider');
 const items = document.querySelectorAll('.slider-item');
@@ -67,3 +73,23 @@ playButton.addEventListener('click', () => {
   }
 });
 showSlide(currentIndex);
+
+// login processes 
+
+document.addEventListener("DOMContentLoaded", () => {
+  const authLink = document.getElementById('authLink');
+  const token = localStorage.getItem('authToken');
+
+  if (token) {
+      authLink.textContent = 'Logout';
+      authLink.href = '#';
+      authLink.addEventListener('click', () => {
+          localStorage.removeItem('authToken');
+          alert('Logged out successfully!');
+          location.reload(); 
+      });
+  } else {
+      authLink.textContent = 'Login';
+      authLink.href = 'auth/index.html'; 
+  }
+});

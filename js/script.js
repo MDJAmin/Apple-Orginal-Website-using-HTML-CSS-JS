@@ -17,7 +17,7 @@ const swiper = new Swiper('.mySwiper', {
     prevEl: '.swiper-button-prev'
   },
   autoplay: {
-    delay: 3000,       
+    delay: 10000,       
     disableOnInteraction: false, 
   },
   pagination: {
@@ -25,3 +25,48 @@ const swiper = new Swiper('.mySwiper', {
     clickable: true,            
   },
 });
+
+const slider = document.querySelector('.slider');
+const items = document.querySelectorAll('.slider-item');
+const playButton = document.getElementById('playButton');
+const playIcon = document.getElementById('playIcon');
+let currentIndex = 0;
+let interval;
+let isPlaying = false;
+
+function showSlide(index) {
+  items.forEach((item, i) => {
+    item.classList.remove('active');
+    if (i === index) {
+      item.classList.add('active');
+    }
+  });
+  
+  // Adjust slider position to only show active image with adjacent ones slightly visible
+  slider.style.transform = `translateX(-${index * 100}%)`;
+}
+
+function startSlider() {
+  interval = setInterval(() => {
+    currentIndex = (currentIndex + 1) % items.length;
+    showSlide(currentIndex);
+  }, 2000); // 2 seconds for each slide
+}
+
+function stopSlider() {
+  clearInterval(interval);
+}
+
+playButton.addEventListener('click', () => {
+  isPlaying = !isPlaying;
+  if (isPlaying) {
+    playIcon.textContent = '❚❚'; // Change to pause icon
+    startSlider();
+  } else {
+    playIcon.textContent = '▶'; // Change to play icon
+    stopSlider();
+  }
+});
+
+// Initialize the slider by showing the first image
+showSlide(currentIndex);

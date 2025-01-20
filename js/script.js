@@ -9,20 +9,20 @@ hamburger.addEventListener("click", () => {
 
 
 const swiper = new Swiper('.mySwiper', {
-  loop: true,          
-  spaceBetween: 20,    
-  slidesPerView: 1,    
+  loop: true,
+  spaceBetween: 20,
+  slidesPerView: 1,
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev'
   },
   autoplay: {
-    delay: 10000,       
-    disableOnInteraction: false, 
+    delay: 10000,
+    disableOnInteraction: false,
   },
   pagination: {
-    el: '.swiper-pagination',   
-    clickable: true,            
+    el: '.swiper-pagination',
+    clickable: true,
   },
 });
 
@@ -41,8 +41,7 @@ function showSlide(index) {
       item.classList.add('active');
     }
   });
-  
-  // Adjust slider position to only show active image with adjacent ones slightly visible
+
   slider.style.transform = `translateX(-${index * 100}%)`;
 }
 
@@ -50,7 +49,7 @@ function startSlider() {
   interval = setInterval(() => {
     currentIndex = (currentIndex + 1) % items.length;
     showSlide(currentIndex);
-  }, 2000); // 2 seconds for each slide
+  }, 2000);
 }
 
 function stopSlider() {
@@ -60,13 +59,11 @@ function stopSlider() {
 playButton.addEventListener('click', () => {
   isPlaying = !isPlaying;
   if (isPlaying) {
-    playIcon.textContent = '❚❚'; // Change to pause icon
+    playIcon.textContent = '❚❚';
     startSlider();
   } else {
-    playIcon.textContent = '▶'; // Change to play icon
+    playIcon.textContent = '▶';
     stopSlider();
   }
 });
-
-// Initialize the slider by showing the first image
 showSlide(currentIndex);

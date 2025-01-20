@@ -7,7 +7,7 @@
 }
 /* Root for themes */
 :root {
-  --background-wormy: #f7f7f9;
+  --background-wormy: #f7f7f9d7;
   --background-light: #ffffff;
   --background-dark: #000;
   --text-light: #000;

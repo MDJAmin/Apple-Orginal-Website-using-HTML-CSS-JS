@@ -75,7 +75,7 @@ function moveSlider() {
 
   currentIndex = (currentIndex + 1) % items.length;
   items[currentIndex].classList.add('active');
-  
+
   slider.style.transform = `translateX(-${currentIndex * 100}%)`;
 }
 
@@ -108,16 +108,16 @@ document.addEventListener("DOMContentLoaded", () => {
   const token = localStorage.getItem('authToken');
 
   if (token) {
-      authLink.textContent = 'Logout';
-      authLink.href = '#';
-      authLink.addEventListener('click', () => {
-          localStorage.removeItem('authToken');
-          alert('Logged out successfully!');
-          location.reload(); 
-      });
+    authLink.textContent = 'Logout';
+    authLink.href = '#';
+    authLink.addEventListener('click', () => {
+      localStorage.removeItem('authToken');
+      alert('Logged out successfully!');
+      location.reload();
+    });
   } else {
-      authLink.textContent = 'Login';
-      authLink.href = 'auth/index.html'; 
+    authLink.textContent = 'Login';
+    authLink.href = 'auth/index.html';
   }
 });
 

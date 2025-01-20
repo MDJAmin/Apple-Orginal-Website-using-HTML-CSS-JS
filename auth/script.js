@@ -9,7 +9,7 @@ const checkLoginStatus = () => {
             localStorage.removeItem('authToken');
             messageDiv.textContent = 'Logged out successfully.';
             setTimeout(() => {
-                location.reload(); 
+                location.reload();
             }, 1500);
         });
     } else {
@@ -18,7 +18,7 @@ const checkLoginStatus = () => {
 };
 
 loginButton.addEventListener('click', async () => {
-    if (loginButton.textContent === 'Logout') return; 
+    if (loginButton.textContent === 'Logout') return;
 
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;

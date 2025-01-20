@@ -93,3 +93,11 @@ document.addEventListener("DOMContentLoaded", () => {
       authLink.href = 'auth/index.html'; 
   }
 });
+
+
+// copyright date 
+
+document.addEventListener("DOMContentLoaded", () => {
+  const currentYear = new Date().getFullYear();
+  document.getElementById("currentYear").textContent = currentYear;
+});

@@ -13,7 +13,8 @@
   --text-dark: #fff;
 }
 body {
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif !important;
+  font-family: "Franklin Gothic Medium", "Arial Narrow",
+    Arial, sans-serif !important;
   background: var(--background-light);
   color: var(--text-light);
   margin: 0;
@@ -270,19 +271,19 @@ nav a {
 .heroContentButtons button {
   padding: 7px 15px;
   background-color: transparent;
-  color: #0077ED;
-  border-color: #0077ED;
+  color: #0077ed;
+  border-color: #0077ed;
   border-radius: 20px;
 }
-.heroContentButtons button:first-child{
+.heroContentButtons button:first-child {
   color: white;
   background-color: #0076ede1;
   border: none;
 }
-.heroContentButtons button:first-child:hover{
+.heroContentButtons button:first-child:hover {
   background-color: #0076ed;
 }
-.heroContentButtons button:last-child:hover{
+.heroContentButtons button:last-child:hover {
   background-color: #0076ed;
   color: white;
 }
@@ -313,15 +314,15 @@ nav a {
   border-color: #ffffff;
   border-radius: 20px;
 }
-.twoContentButtons button:first-child{
+.twoContentButtons button:first-child {
   color: rgb(0, 0, 0);
   background-color: #ffffffe1;
   border: none;
 }
-.twoContentButtons button:first-child:hover{
+.twoContentButtons button:first-child:hover {
   background-color: #ffffff;
 }
-.twoContentButtons button:last-child:hover{
+.twoContentButtons button:last-child:hover {
   background-color: #ffffff;
   color: rgb(0, 0, 0);
 }
@@ -348,38 +349,36 @@ nav a {
 .threeContentButtons button {
   padding: 7px 15px;
   background-color: transparent;
-  color: #0077ED;
-  border-color: #0077ED;
+  color: #0077ed;
+  border-color: #0077ed;
   border-radius: 20px;
 }
-.threeContentButtons button:first-child{
+.threeContentButtons button:first-child {
   color: white;
   background-color: #0076ede1;
   border: none;
 }
-.threeContentButtons button:first-child:hover{
+.threeContentButtons button:first-child:hover {
   background-color: #0076ed;
 }
-.threeContentButtons button:last-child:hover{
+.threeContentButtons button:last-child:hover {
   background-color: #0076ed;
   color: white;
 }
 
+.heroContent h3,
+.twoContent h3,
+.threeContent h3 {
+  font-size: 3em;
+}
 
-  .heroContent h3,
-  .twoContent h3,
-  .threeContent h3{
-    font-size: 3em;
-  }
+.heroContent button,
+.twoContent button,
+.threeContent button {
+  font-size: 1.3em;
+}
 
-  
-  .heroContent button,
-  .twoContent button,
-  .threeContent button{
-    font-size: 1.3em;
-  }
-
-@media (max-width:1000px) {
+@media (max-width: 1000px) {
   .heroContent,
   .twoContent,
   .threeContent,
@@ -391,31 +390,29 @@ nav a {
   }
 }
 
-@media (max-width:600px) {
+@media (max-width: 600px) {
   .heroContent,
   .twoContent,
   .threeContent,
   .heroContent h3,
   .twoContent h3,
-  .threeContent h3{
+  .threeContent h3 {
     font-size: 0.7rem;
     top: 33%;
   }
 }
 
-
-@media (max-width:500px) {
+@media (max-width: 500px) {
   .heroContent,
   .twoContent,
   .threeContent,
   .heroContent h3,
   .twoContent h3,
-  .threeContent h3{
+  .threeContent h3 {
     font-size: 0.5rem;
     top: 33%;
   }
 }
-
 
 /* sectionProducts */
 .product-section-one,
@@ -458,7 +455,8 @@ nav a {
   font-size: 1.7em;
   margin-bottom: 20px;
 }
-.product-section-three p,.product-section-three h4{
+.product-section-three p,
+.product-section-three h4 {
   color: #000;
 }
 .product-buttons button {

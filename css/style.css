@@ -13,7 +13,7 @@
   --text-dark: #fff;
 }
 body {
-  font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif !important;
   background: var(--background-light);
   color: var(--text-light);
   margin: 0;
@@ -170,6 +170,7 @@ nav a {
   .threeContent p {
     font-size: 10px;
   }
+
   .heroContentButtons button,
   .twoContentButtons button,
   .threeContentButtons button {
@@ -248,6 +249,7 @@ nav a {
     padding: 0 3%;
   }
 }
+/* Section One */
 .heroSection {
   position: relative;
   width: 100%;
@@ -259,15 +261,33 @@ nav a {
 }
 .heroContent {
   position: absolute;
-  top: 50%;
+  top: 18%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
   color: white;
 }
 .heroContentButtons button {
-  margin: 10px;
+  padding: 7px 15px;
+  background-color: transparent;
+  color: #0077ED;
+  border-color: #0077ED;
+  border-radius: 20px;
 }
+.heroContentButtons button:first-child{
+  color: white;
+  background-color: #0076ede1;
+  border: none;
+}
+.heroContentButtons button:first-child:hover{
+  background-color: #0076ed;
+}
+.heroContentButtons button:last-child:hover{
+  background-color: #0076ed;
+  color: white;
+}
+
+/* Section Two */
 .sectionTwo {
   margin: 1.5% 0;
   position: relative;
@@ -280,15 +300,33 @@ nav a {
 }
 .twoContent {
   position: absolute;
-  top: 50%;
+  top: 18%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
   color: white;
 }
 .twoContentButtons button {
-  margin: 10px;
+  padding: 7px 15px;
+  background-color: transparent;
+  color: #0077ED;
+  border-color: #0077ED;
+  border-radius: 20px;
 }
+.twoContentButtons button:first-child{
+  color: white;
+  background-color: #0076ede1;
+  border: none;
+}
+.twoContentButtons button:first-child:hover{
+  background-color: #0076ed;
+}
+.twoContentButtons button:last-child:hover{
+  background-color: #0076ed;
+  color: white;
+}
+
+/* Section Three */
 .sectionThree {
   margin: 1.5% 0;
   position: relative;
@@ -301,14 +339,30 @@ nav a {
 }
 .threeContent {
   position: absolute;
-  top: 50%;
+  top: 18%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  color: white;
+  color: rgb(0, 0, 0);
 }
 .threeContentButtons button {
-  margin: 10px;
+  padding: 7px 15px;
+  background-color: transparent;
+  color: #0077ED;
+  border-color: #0077ED;
+  border-radius: 20px;
+}
+.threeContentButtons button:first-child{
+  color: white;
+  background-color: #0076ede1;
+  border: none;
+}
+.threeContentButtons button:first-child:hover{
+  background-color: #0076ed;
+}
+.threeContentButtons button:last-child:hover{
+  background-color: #0076ed;
+  color: white;
 }
 .product-section-one,
 .product-section-two,

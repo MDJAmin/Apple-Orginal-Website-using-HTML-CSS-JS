@@ -364,6 +364,37 @@ nav a {
   background-color: #0076ed;
   color: white;
 }
+
+@media (max-width:1000px) {
+  .heroContent,
+  .twoContent,
+  .threeContent, h3{
+    font-size: 0.9rem;
+    top: 25%;
+  }
+}
+
+@media (max-width:600px) {
+  .heroContent,
+  .twoContent,
+  .threeContent, h3{
+    font-size: 0.7rem;
+    top: 33%;
+  }
+}
+
+
+@media (max-width:500px) {
+  .heroContent,
+  .twoContent,
+  .threeContent, h3{
+    font-size: 0.5rem;
+    top: 33%;
+  }
+}
+
+
+/* card's */
 .product-section-one,
 .product-section-two,
 .product-section-three {

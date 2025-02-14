@@ -309,21 +309,21 @@ nav a {
 .twoContentButtons button {
   padding: 7px 15px;
   background-color: transparent;
-  color: #0077ED;
-  border-color: #0077ED;
+  color: #ffffff;
+  border-color: #ffffff;
   border-radius: 20px;
 }
 .twoContentButtons button:first-child{
-  color: white;
-  background-color: #0076ede1;
+  color: rgb(0, 0, 0);
+  background-color: #ffffffe1;
   border: none;
 }
 .twoContentButtons button:first-child:hover{
-  background-color: #0076ed;
+  background-color: #ffffff;
 }
 .twoContentButtons button:last-child:hover{
-  background-color: #0076ed;
-  color: white;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
 }
 
 /* Section Three */
@@ -365,10 +365,27 @@ nav a {
   color: white;
 }
 
+
+  .heroContent h3,
+  .twoContent h3,
+  .threeContent h3{
+    font-size: 3em;
+  }
+
+  
+  .heroContent button,
+  .twoContent button,
+  .threeContent button{
+    font-size: 1.3em;
+  }
+
 @media (max-width:1000px) {
   .heroContent,
   .twoContent,
-  .threeContent, h3{
+  .threeContent,
+  .heroContent h3,
+  .twoContent h3,
+  .threeContent h3 {
     font-size: 0.9rem;
     top: 25%;
   }
@@ -377,7 +394,10 @@ nav a {
 @media (max-width:600px) {
   .heroContent,
   .twoContent,
-  .threeContent, h3{
+  .threeContent,
+  .heroContent h3,
+  .twoContent h3,
+  .threeContent h3{
     font-size: 0.7rem;
     top: 33%;
   }
@@ -387,14 +407,17 @@ nav a {
 @media (max-width:500px) {
   .heroContent,
   .twoContent,
-  .threeContent, h3{
+  .threeContent,
+  .heroContent h3,
+  .twoContent h3,
+  .threeContent h3{
     font-size: 0.5rem;
     top: 33%;
   }
 }
 
 
-/* card's */
+/* sectionProducts */
 .product-section-one,
 .product-section-two,
 .product-section-three {
@@ -404,7 +427,7 @@ nav a {
   flex-wrap: wrap;
 }
 .product-card {
-  width: 350px;
+  width: 800px;
   position: relative;
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -428,12 +451,15 @@ nav a {
   border-radius: 8px;
 }
 .product-info h4 {
-  font-size: 18px;
+  font-size: 2em;
   margin-bottom: 10px;
 }
 .product-info p {
-  font-size: 14px;
+  font-size: 1.7em;
   margin-bottom: 20px;
+}
+.product-section-three p,.product-section-three h4{
+  color: #000;
 }
 .product-buttons button {
   padding: 10px 20px;
@@ -455,11 +481,12 @@ nav a {
 .swiper-container {
   padding: 0 7%;
   margin-top: 4%;
-  width: 100%;
+  width: screen;
+  height: 400px;
 }
 .swiper-slide img {
-  width: 100%;
-  height: 100%;
+  width: 100% !important;
+  height: 450px;
   object-fit: cover;
 }
 .swiper-button-next,

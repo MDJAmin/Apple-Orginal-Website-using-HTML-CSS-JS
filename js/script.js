@@ -15,7 +15,7 @@ hamburger.addEventListener("click", () => {
 const swiper = new Swiper('.mySwiper', {
   loop: true,
   spaceBetween: 20,
-  slidesPerView: 1,
+  slidesPerView: 2.1,
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev'
@@ -29,6 +29,9 @@ const swiper = new Swiper('.mySwiper', {
     clickable: true,
   },
 });
+
+// slider 2
+
 const slider = document.getElementById('slider');
 const playButton = document.getElementById('playButton');
 const playIcon = document.getElementById('playIcon');
